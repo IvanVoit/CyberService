@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberService | Professional IT Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                 <img src="Images/CyberService.png" alt="Logo" class="logo-img"> 
+                 Cyber<span>Service</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Expert Systems & Network Management</h1>
+            <p>Stable, secure, and efficient solutions since 2016.</p>
+            <a href="#order" class="btn">Request a Service</a>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="section-title">
+            <h2>Who Are We?</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>We are <strong>CyberService</strong>, a company headquartered in Barcelona dedicated to the installation and management of computer systems and networks. Founded in 2016, we have grown into a global provider.</p>
+                <p>Our main offices are in Barcelona, but we maintain a strong international presence with offices in:</p>
+                <ul class="locations">
+                    <li><i class="fas fa-map-marker-alt"></i> Paris</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Kiev</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Washington DC</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Bogota</li>
+                </ul>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card"><h3>8+</h3><p>Years Experience</p></div>
+                <div class="stat-card"><h3>5</h3><p>Global Offices</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Do We Offer?</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Server Config</h3>
+                    <p>Expert setup of servers and domains for maximum stability.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Cyber Security</h3>
+                    <p>Ensuring your systems remain secure and incident-free.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Monitoring</h3>
+                    <p>24/7 maintenance and monitoring to guarantee correct operation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="container">
+        <div class="section-title">
+            <h2>Order a Service</h2>
+            <div class="underline"></div>
+        </div>
+        <form id="orderForm" class="contact-form">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <select id="service-type" required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="server">Server Installation</option>
+                    <option value="network">Network Management</option>
+                    <option value="maintenance">System Maintenance</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-full">Submit Request</button>
+        </form>
+    </section>
+    <!-- TEAM SECTION -->
+<section id="team" class="container">
+    <div class="section-title">
+        <h2>Our Founders</h2>
+        <div class="underline"></div>
+    </div>
+    
+    <div class="team-grid">
+        <!-- Founder 1 -->
+        <div class="team-card">
+            <div class="team-photo-frame">
+                <img src="/Images/ivan.png" alt="Ivan Voitekhovych">
+            </div>
+            <h3>Ivan Voitekhovych</h3>
+            <p>CEO & Founder</p>
+        </div>
+
+        <!-- Founder 2 -->
+        <div class="team-card">
+            <div class="team-photo-frame">
+                <img src="/Images/jose.png" alt="José Amaya">
+            </div>
+            <h3>José Amaya</h3>
+            <p>Technical Director</p>
+        </div>
+
+        <!-- Founder 3 -->
+        <div class="team-card">
+            <div class="team-photo-frame">
+                <img src="/Images/daniel.png" alt="Daniel Soliz">
+            </div>
+            <h3>Daniel Soliz</h3>
+            <p>Systems Architect</p>
+        </div>
+
+        <!-- Founder 4 -->
+        <div class="team-card">
+            <div class="team-photo-frame">
+                <img src="/Images/miguel.png" alt="Miguel Tabares">
+            </div>
+            <h3>Miguel Tabares</h3>
+            <p>Network Specialist</p>
+        </div>
+    </div>
+</section>
+
+    <footer id="contact">
+        <p>&copy; 2026 CyberService. All rights reserved.</p>
+        <p>Barcelona | Paris | Kiev | Washington DC | Bogota</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
