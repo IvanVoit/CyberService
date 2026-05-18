@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const orderForm = document.getElementById('orderForm');
 
-    // Handle Form Submission
-    orderForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
+        // We remove e.preventDefault() so the form actually submits to Formspree
+        orderForm.addEventListener('submit', () => {
+            // We can still show a message before the page redirects
+            alert("Thank you! You are now being redirected to complete the verification.");
+        });
         // Get values
         const name = document.getElementById('name').value;
         const service = document.getElementById('service-type').value;
