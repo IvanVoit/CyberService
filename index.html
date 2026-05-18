@@ -90,26 +90,26 @@
             <h2>Order a Service</h2>
             <div class="underline"></div>
         </div>
-        <form id="orderForm" class="contact-form">
-            <div class="form-group">
-                <input type="text" id="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-                <input type="email" id="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <select id="service-type" required>
-                    <option value="" disabled selected>Select a Service</option>
-                    <option value="server">Server Installation</option>
-                    <option value="network">Network Management</option>
-                    <option value="maintenance">System Maintenance</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <textarea id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-full">Submit Request</button>
-        </form>
+        <form action="https://formspree.io/f/xkoenped" method="POST" id="orderForm" class="contact-form">
+    <div class="form-group">
+        <input type="text" name="name" id="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" name="_replyto" id="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+        <select name="service" id="service-type" required>
+            <option value="" disabled selected>Select a Service</option>
+            <option value="server">Server Installation</option>
+            <option value="network">Network Management</option>
+            <option value="maintenance">System Maintenance</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <textarea name="message" id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+    </div>
+    <button type="submit" class="btn btn-full">Submit Request</button>
+</form>
     </section>
     <!-- TEAM SECTION -->
 <section id="team" class="container">
@@ -136,30 +136,11 @@
             <h3>José Amaya</h3>
             <p>Technical Director</p>
         </div>
-
-        <!-- Founder 3 -->
-        <div class="team-card">
-            <div class="team-photo-frame">
-                <img src="Images/daniel.png" alt="Daniel Soliz">
-            </div>
-            <h3>Daniel Soliz</h3>
-            <p>Systems Architect</p>
-        </div>
-
-        <!-- Founder 4 -->
-        <div class="team-card">
-            <div class="team-photo-frame">
-                <img src="Images/miguel.png" alt="Miguel Tabares">
-            </div>
-            <h3>Miguel Tabares</h3>
-            <p>Network Specialist</p>
-        </div>
-    </div>
 </section>
 
     <footer id="contact">
         <p>&copy; 2026 CyberService. All rights reserved.</p>
-        <p>Barcelona | Paris | Kiev | Washington DC | Bogota</p>
+        <p>Barcelona | Paris | Kiev | Washington DC | Bogot    a</p>
     </footer>
 
     <script src="script.js"></script>
