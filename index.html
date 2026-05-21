@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberService | Professional IT Solutions</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for a modern look -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -15,36 +13,56 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                 <img src="Images/CyberService.png" alt="Logo" class="logo-img"> 
-                 Cyber<span>Service</span>
+                <img src="Images/CyberService.png" alt="Logo" class="logo-img">
+                Cyber<span>Service</span>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#order">Order</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#services" data-i18n="nav_services">Services</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="#order" data-i18n="nav_order">Order</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
             </ul>
+
+            <!-- Language Selector -->
+            <div class="lang-selector">
+                <button class="lang-btn" id="langBtn" aria-label="Select language" aria-expanded="false">
+                    <i class="fas fa-globe"></i>
+                    <span id="currentLang">EN</span>
+                    <i class="fas fa-chevron-down lang-arrow"></i>
+                </button>
+                <ul class="lang-dropdown" id="langDropdown" role="listbox">
+                    <li data-lang="en" class="active">🇬🇧 English</li>
+                    <li data-lang="es">🇪🇸 Español</li>
+                    <li data-lang="ca">🏴󠁥󠁳󠁣󠁴󠁿 Català</li>
+                    <li data-lang="de">🇩🇪 Deutsch</li>
+                    <li data-lang="ru">🇷🇺 Русский</li>
+                    <li data-lang="uk">🇺🇦 Українська</li>
+                </ul>
+            </div>
         </nav>
     </header>
 
+    <!-- HERO -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Expert Systems & Network Management</h1>
-            <p>Stable, secure, and efficient solutions since 2016.</p>
-            <a href="#order" class="btn">Request a Service</a>
+            <h1 data-i18n="hero_title">Expert Systems & Network Management</h1>
+            <p data-i18n="hero_subtitle">Stable, secure, and efficient solutions since 2016.</p>
+            <a href="#order" class="btn smooth-scroll" data-i18n="hero_btn">Request a Service</a>
         </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="container">
         <div class="section-title">
-            <h2>Who Are We?</h2>
+            <h2 data-i18n="about_title">Who Are We?</h2>
             <div class="underline"></div>
         </div>
         <div class="about-grid">
             <div class="about-text">
-                <p>We are <strong>CyberService</strong>, a company headquartered in Barcelona dedicated to the installation and management of computer systems and networks. Founded in 2016, we have grown into a global provider.</p>
-                <p>Our main offices are in Barcelona, but we maintain a strong international presence with offices in:</p>
+                <p data-i18n="about_p1">We are <strong>CyberService</strong>, a company headquartered in Barcelona dedicated to the installation and management of computer systems and networks. Founded in 2016, we have grown into a global provider.</p>
+                <p data-i18n="about_p2">Our main offices are in Barcelona, but we maintain a strong international presence with offices in:</p>
                 <ul class="locations">
                     <li><i class="fas fa-map-marker-alt"></i> Paris</li>
                     <li><i class="fas fa-map-marker-alt"></i> Kiev</li>
@@ -53,94 +71,141 @@
                 </ul>
             </div>
             <div class="about-stats">
-                <div class="stat-card"><h3>10+</h3><p>Years Experience</p></div>
-                <div class="stat-card"><h3>5</h3><p>Global Offices</p></div>
+                <div class="stat-card"><h3>10+</h3><p data-i18n="stat_years">Years Experience</p></div>
+                <div class="stat-card"><h3>5</h3><p data-i18n="stat_offices">Global Offices</p></div>
             </div>
         </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services" class="bg-light">
         <div class="container">
             <div class="section-title">
-                <h2>What Do We Offer?</h2>
+                <h2 data-i18n="services_title">What Do We Offer?</h2>
                 <div class="underline"></div>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <i class="fas fa-server"></i>
-                    <h3>Server Config</h3>
-                    <p>Expert setup of servers and domains for maximum stability.</p>
+                    <h3 data-i18n="srv1_title">Server Config</h3>
+                    <p data-i18n="srv1_desc">Expert setup of servers and domains for maximum stability.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-shield-alt"></i>
-                    <h3>Cyber Security</h3>
-                    <p>Ensuring your systems remain secure and incident-free.</p>
+                    <h3 data-i18n="srv2_title">Cyber Security</h3>
+                    <p data-i18n="srv2_desc">Ensuring your systems remain secure and incident-free.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-chart-line"></i>
-                    <h3>Monitoring</h3>
-                    <p>24/7 maintenance and monitoring to guarantee correct operation.</p>
+                    <h3 data-i18n="srv3_title">Monitoring</h3>
+                    <p data-i18n="srv3_desc">24/7 maintenance and monitoring to guarantee correct operation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="order" class="container">
+    <!-- PROJECTS -->
+    <section id="projects" class="container">
         <div class="section-title">
-            <h2>Order a Service</h2>
+            <h2 data-i18n="projects_title">Our Projects</h2>
+            <div class="underline"></div>
+            <p class="section-subtitle" data-i18n="projects_subtitle">A selection of the work we are proud of.</p>
+        </div>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-building"></i></div>
+                <div class="project-tag" data-i18n="proj1_tag">Infrastructure</div>
+                <h3 data-i18n="proj1_title">FinCorp Barcelona — Server Migration</h3>
+                <p data-i18n="proj1_desc">Full migration of legacy on-premise servers to a hybrid cloud architecture for a 300-employee financial firm. Achieved 99.98% uptime and reduced infrastructure costs by 35%.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar-alt"></i> 2023</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Barcelona</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-lock"></i></div>
+                <div class="project-tag project-tag--security" data-i18n="proj2_tag">Cyber Security</div>
+                <h3 data-i18n="proj2_title">EuroRetail Group — Security Overhaul</h3>
+                <p data-i18n="proj2_desc">Comprehensive security audit and full implementation of a zero-trust network model across 12 retail locations in France and Germany. Zero incidents in the 18 months following deployment.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar-alt"></i> 2022–2023</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Paris</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+                <div class="project-tag project-tag--monitoring" data-i18n="proj3_tag">Monitoring</div>
+                <h3 data-i18n="proj3_title">GovTech Ukraine — 24/7 Network Ops</h3>
+                <p data-i18n="proj3_desc">Design and deployment of a 24/7 network operations center for a government technology agency. Includes real-time dashboards, alerting pipelines, and automated incident response.</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar-alt"></i> 2024</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Kiev</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ORDER -->
+    <section id="order" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="order_title">Order a Service</h2>
+                <div class="underline"></div>
+            </div>
+            <form action="https://formspree.io/f/xkoenped" method="POST" id="orderForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" id="name" data-i18n-placeholder="form_name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="_replyto" id="email" data-i18n-placeholder="form_email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <select name="service" id="service-type" required>
+                        <option value="" disabled selected data-i18n="form_select">Select a Service</option>
+                        <option value="server" data-i18n="form_opt1">Server Installation</option>
+                        <option value="network" data-i18n="form_opt2">Network Management</option>
+                        <option value="maintenance" data-i18n="form_opt3">System Maintenance</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" rows="5" data-i18n-placeholder="form_message" placeholder="Tell us about your project..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-full" data-i18n="form_submit">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="container">
+        <div class="section-title">
+            <h2 data-i18n="team_title">Our Founders</h2>
             <div class="underline"></div>
         </div>
-        <form action="https://formspree.io/f/xkoenped" method="POST" id="orderForm" class="contact-form">
-    <div class="form-group">
-        <input type="text" name="name" id="name" placeholder="Your Name" required>
-    </div>
-    <div class="form-group">
-        <input type="email" name="_replyto" id="email" placeholder="Your Email" required>
-    </div>
-    <div class="form-group">
-        <select name="service" id="service-type" required>
-            <option value="" disabled selected>Select a Service</option>
-            <option value="server">Server Installation</option>
-            <option value="network">Network Management</option>
-            <option value="maintenance">System Maintenance</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <textarea name="message" id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
-    </div>
-    <button type="submit" class="btn btn-full">Submit Request</button>
-</form>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-photo-frame">
+                    <img src="Images/ivan.png" alt="Ivan Voitekhovych">
+                </div>
+                <h3>Ivan Voitekhovych</h3>
+                <p data-i18n="team1_role">CEO & Founder</p>
+            </div>
+            <div class="team-card">
+                <div class="team-photo-frame">
+                    <img src="Images/jose.png" alt="José Amaya">
+                </div>
+                <h3>José Amaya</h3>
+                <p data-i18n="team2_role">Technical Director</p>
+            </div>
+        </div>
     </section>
-    <!-- TEAM SECTION -->
-<section id="team" class="container">
-    <div class="section-title">
-        <h2>Our Founders</h2>
-        <div class="underline"></div>
-    </div>
-    
-    <div class="team-grid">
-        <!-- Founder 1 -->
-        <div class="team-card">
-            <div class="team-photo-frame">
-                <img src="Images/ivan.png" alt="Ivan Voitekhovych">
-            </div>
-            <h3>Ivan Voitekhovych</h3>
-            <p>CEO & Founder</p>
-        </div>
-
-        <!-- Founder 2 -->
-        <div class="team-card">
-            <div class="team-photo-frame">
-                <img src="Images/jose.png" alt="José Amaya">
-            </div>
-            <h3>José Amaya</h3>
-            <p>Technical Director</p>
-        </div>
-</section>
 
     <footer id="contact">
-        <p>&copy; 2026 CyberService. All rights reserved.</p>
-        <p>Barcelona | Paris | Kiev | Washington DC | Bogot    a</p>
+        <p>&copy; 2026 CyberService. <span data-i18n="footer_rights">All rights reserved.</span></p>
+        <p>Barcelona | Paris | Kiev | Washington DC | Bogotá</p>
     </footer>
 
     <script src="script.js"></script>
