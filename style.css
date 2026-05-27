@@ -198,7 +198,6 @@ header {
 
 .btn:hover { background: var(--accent-color); }
 
-/* ── About ── */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
