@@ -1,4 +1,3 @@
-/* ── Translations ── */
 const translations = {
     en: {
         nav_home: "Home", nav_about: "About", nav_services: "Services",
